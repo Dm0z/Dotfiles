@@ -15,6 +15,11 @@ get_current_time() {
     date '+%I:%M %p'
 }
 
+
+
+
+
+
 # Function to check if battery is charging
 is_charging() {
     acpi | grep -qi "Charging"
@@ -30,17 +35,10 @@ toggle_mute() {
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 }
 
-# Function to adjust audio volume using pavucontrol
-adjust_volume() {
-    if [ "$1" == "up" ]; then
-        pactl set-sink-volume @DEFAULT_SINK@ +5%
-    elif [ "$1" == "down" ]; then
-        pactl set-sink-volume @DEFAULT_SINK@ -5%
-    fi
-}
 
 # Define font path
 font_path="/home/dmoz/.fonts/Iosevka Term Nerd Font Complete.ttf"
+
 
 while true; do
     # Get the current time and battery information
@@ -50,12 +48,6 @@ while true; do
 
     # Construct the output string with battery level and charging status on the right side, date and time in the middle, and audio level and mute indicator on the left side
     output="%{l} $(date '+%A %d %B') | Time: $current_time %{c}"
-
-    if is_muted; then
-        output+="Muted"
-    else
-        output+="Volume: $(pactl list sinks | awk '/Volume: front/{print $5}' | grep -oE '[0-9]+')%"
-    fi
 
     if is_charging; then
         output+=" %{r} $battery_status $battery_percentage% "
@@ -83,5 +75,3 @@ done | lemonbar -p -f "$font_path:size=10" -B "#00000000" -F "#FFFFFF" -g 1366x2
             ;;
     esac
 done
-
-
