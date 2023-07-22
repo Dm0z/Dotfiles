@@ -43,7 +43,7 @@ while true; do
     battery_level=$(get_battery_level)
 
     # Construct the output string with date and time on the left side, battery level and charging status in the middle, audio level and mute indicator on the right side
-    output="%{l}Date: $(date '+%A %d %B') | Time: $current_time %{c}"
+    output="%{l} $(date '+%A %d %B') | Time: $current_time %{c}"
 
     if is_charging; then
         output+="Charging | "
