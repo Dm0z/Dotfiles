@@ -46,7 +46,7 @@ while true; do
     output="%{l} $(date '+%A %d %B') | Time: $current_time %{c}"
 
     if is_charging; then
-        output+="Charging | "
+        output+=" | "
     fi
 
     output+="Battery: $battery_level% %{r}"
