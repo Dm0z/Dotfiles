@@ -1,0 +1,49 @@
+window:
+  opacity: 0.4
+  background_opacity:  # Fixed the typo here (changed 'backround_opacity' to 'background_opacity')
+
+font:
+  normal:
+    family: Iosevka Term Nerd Font  # Added a colon to separate the key and value
+    style: Regular
+  bold:
+    family: Iosevka Term Nerd Font
+    style: Bold
+
+  italic:
+    family: Iosevka Term Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: Iosevka Term Nerd Font
+    style: Bold Italic
+
+  size: 10  # Added a colon to separate the key and value
+
+colors:
+  # Default colors
+  primary:
+    background: '#2E3436'
+    foreground: '#DEDDDA'
+
+  # Normal colors
+  normal:
+    black:   '#2E3436'
+    red:     '#555753'
+    green:   '#3D3846'
+    yellow:  '#3D3846'
+    blue:    '#DEDDDA'
+    magenta: '#DEDDDA'
+    cyan:    '#9A9996'
+    white:   '#DEDDDA'
+
+  # Bright colors
+  bright:
+    black:   '#23393A'
+    red:     '#9A9996'
+    green:   '#FFFFFF'
+    yellow:  '#C0BFBC'
+    blue:    '#143138'
+    magenta: '#77767B'
+    cyan:    '#D3D7CF'
+    white:   '#C9C9C7'
