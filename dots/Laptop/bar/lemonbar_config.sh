@@ -2,7 +2,7 @@
 
 # Function to get the battery status using acpi
 get_battery_status() {
-    acpi | awk '{print $3}' | tr -d ','
+    acpi | awk '{print $3}' | tr -d ',' | sed 's/Discharging/Dying/'
 }
 
 # Function to get the battery percentage using acpi
@@ -30,10 +30,8 @@ toggle_mute() {
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 }
 
-
 # Define font path
 font_path="/home/dmoz/.fonts/Iosevka Term Nerd Font Complete.ttf"
-
 
 while true; do
     # Get the current time and battery information
@@ -47,7 +45,7 @@ while true; do
     if is_charging; then
         output+=" %{r} $battery_status $battery_percentage% "
     else
-        output+=" %{r} Discharging: $battery_percentage% $battery_status"
+        output+=" %{r} $battery_status: $battery_percentage%"
     fi
 
     echo "$output"
