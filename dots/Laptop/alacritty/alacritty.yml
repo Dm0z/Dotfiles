@@ -1,10 +1,10 @@
 window:
   opacity: 0.4
-  background_opacity:  # Fixed the typo here (changed 'backround_opacity' to 'background_opacity')
+  background_opacity:  
 
 font:
   normal:
-    family: Iosevka Term Nerd Font  # Added a colon to separate the key and value
+    family: Iosevka Term Nerd Font  
     style: Regular
   bold:
     family: Iosevka Term Nerd Font
@@ -18,7 +18,7 @@ font:
     family: Iosevka Term Nerd Font
     style: Bold Italic
 
-  size: 10  # Added a colon to separate the key and value
+  size: 10 
 
 colors:
   # Default colors
