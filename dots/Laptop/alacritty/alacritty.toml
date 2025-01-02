@@ -24,3 +24,6 @@ blue = "#143138"
 magenta = "#77767B"
 cyan = "#D3D7CF"
 white = "#C9C9C7"
+
+[cursor]
+style = "Underline"
