@@ -1,12 +1,23 @@
 [window]
 opacity = 0.9
 
+[font]
+size = 10.0
+
+[font.normal]
+family = "0xProto Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "0xProto Nerd Font"
+style = "Regular"
+
 [colors.primary]
 background = "#2E3436"
 foreground = "#DEDDDA"
 
 [colors.normal]
-black = "#2E3436"
+black = "#888888"
 red = "#555753"
 green = "#67656b"
 yellow = "#626066"
@@ -16,7 +27,7 @@ cyan = "#9A9996"
 white = "#DEDDDA"
 
 [colors.bright]
-black = "#23393A"
+black = "#AAAAAA"
 red = "#9A9996"
 green = "#FFFFFF"
 yellow = "#C0BFBC"
@@ -27,3 +38,6 @@ white = "#C9C9C7"
 
 [cursor]
 style = "Underline"
+
+[terminal.shell]
+program = "/usr/bin/fish"
